@@ -66,7 +66,7 @@ delay(2000);
    delay(1);
   }
   //2 laterales de 3 planta + planta alta
- /* for (int i=0; i<100; i++) { 
+ for (int i=0; i<100; i++) { 
  digitalWrite( 0, HIGH );digitalWrite( 1, HIGH );digitalWrite( 2, HIGH ); digitalWrite( 3, HIGH);digitalWrite( 4, HIGH );digitalWrite( 5, HIGH );
  digitalWrite( 6, HIGH );digitalWrite( 7, HIGH );digitalWrite( 8, HIGH );digitalWrite( 9, HIGH );digitalWrite( 10, HIGH );digitalWrite( 11, HIGH );
  digitalWrite( 12, HIGH);digitalWrite( 13, HIGH );digitalWrite( 14, HIGH );digitalWrite( 15, HIGH);
@@ -80,7 +80,7 @@ delay(2000);
    
  digitalWrite( 16, LOW );digitalWrite( 17, HIGH );digitalWrite( 18, LOW );digitalWrite( 19, LOW);
  delay(10);
-  }*/
+  }
   /*digitalWrite( 0, HIGH );digitalWrite( 1, HIGH );digitalWrite( 2, HIGH ); digitalWrite( 3, HIGH);digitalWrite( 4, HIGH );digitalWrite( 5, HIGH );
  digitalWrite( 6, HIGH );digitalWrite( 7, HIGH );digitalWrite( 8, HIGH );digitalWrite( 9, HIGH );digitalWrite( 10, HIGH );digitalWrite( 11, HIGH );
  digitalWrite( 12, HIGH);digitalWrite( 13, HIGH );digitalWrite( 14, HIGH );digitalWrite( 15, HIGH);
