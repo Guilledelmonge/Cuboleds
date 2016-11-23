@@ -1,0 +1,5 @@
+* 64 Leds de color y tamaño al gusto.
+* 4 transistores NPN 2N3904
+* 16 Resistencias de 150 Ohms
+* 4 Resistencias de 10K Ohms
+* Arduino(uno, leonardo, mega, etc.)
