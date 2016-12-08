@@ -2,4 +2,7 @@
 * 4 transistores NPN 2N3904
 * 16 Resistencias de 150 Ohms
 * 4 Resistencias de 10K Ohms
+* 1 Parlante 
+* Pantalla LCD pára arduino
+* 1 potenciometro
 * Arduino(uno, leonardo, mega, etc.)
