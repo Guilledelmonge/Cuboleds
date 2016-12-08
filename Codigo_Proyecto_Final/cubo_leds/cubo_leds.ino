@@ -1,5 +1,6 @@
 #include "notas.h"
 int BuzzerPin = 2;
+int Numero = 0; //variable donde se guardara el numero que se escriba
 void setup() {
 pinMode(BuzzerPin, OUTPUT);
 pinMode( 30, OUTPUT );pinMode( 31, OUTPUT );pinMode( 32, OUTPUT );pinMode( 33, OUTPUT );pinMode( 34, OUTPUT );pinMode( 35, OUTPUT );pinMode( 36, OUTPUT );
@@ -8,8 +9,11 @@ pinMode( 44, OUTPUT );pinMode( 45, OUTPUT );pinMode( 46, OUTPUT );pinMode( 47, O
 Serial.begin(9600);
 }
 
- void loop() {
-  //codigo y canción #1
+void loop() {
+ char dato = Serial.read();
+ if (dato == 'A') {
+  for (int i = 0; i < 1; i++) {
+   //codigo y canción #1
   beep(BuzzerPin, Fa, negra);
   PrenderLeds(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Fa, corchea);
   PrenderLeds(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Fa, corchea);
@@ -103,7 +107,11 @@ Serial.begin(9600);
   PrenderLeds(0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1); delay(50); beep(BuzzerPin, La, corchea);
   PrenderLeds(0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0); delay(50); beep(BuzzerPin, Sol, corchea);
   PrenderLeds(0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Fa, blanca); 
-  //Codigo y canción #2
+  }
+}
+if (dato == 'S') {
+ for (int i = 0; i < 1; i++) {
+   //Codigo y canción #2
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Do, corchea);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Fa, corchea);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Fa, corchea);
@@ -175,8 +183,12 @@ Serial.begin(9600);
   PrenderLeds(1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Sol, corchea);
   PrenderLeds(0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Mi, corchea);
   PrenderLeds(1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Fa, corchea);
-  PrenderLeds(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Fa, corchea);     
-  //Codigo y canción #3
+  PrenderLeds(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); beep(BuzzerPin, Fa, corchea); 
+ }
+}
+if (dato == 'D') {
+ for (int i = 0; i < 1; i++) {    
+   //Codigo y canción #3
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); beep(BuzzerPin, Re, semicorchea); delay(100);
   PrenderLeds(0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); beep(BuzzerPin, Re, semifusa); delay(50);
   PrenderLeds(0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); beep(BuzzerPin, Re, semicorchea); delay(100);
@@ -342,7 +354,11 @@ Serial.begin(9600);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0); beep(BuzzerPin, ReAlto, semifusa); delay(150);
   PrenderLeds(1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1); beep(BuzzerPin, DoSostenidoAlto, semifusa); delay(200);
   PrenderLeds(0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1); beep(BuzzerPin, SolGrande, semifusa); delay(50);
-  PrenderLeds(1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1); beep(BuzzerPin, SolGrande, semifusa); delay(50);     
+  PrenderLeds(1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1); beep(BuzzerPin, SolGrande, semifusa); delay(50); 
+  }
+}
+if (dato == 'F') {
+ for (int i = 0; i < 1; i++) {    
    //codigo y canción #4
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1); delay(50); beep(BuzzerPin, La, cor);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1); delay(50); beep(BuzzerPin, La, cor);
@@ -492,7 +508,9 @@ Serial.begin(9600);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0); delay(50); beep(BuzzerPin, DoAlto, semif);
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0); delay(50); beep(BuzzerPin, La, corch);
   PrenderLeds(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); delay(650);
+  }
  }
+}
  void beep (unsigned char Pinbuzzer, int frecuencia, long tiempo)
  {
   int x;
