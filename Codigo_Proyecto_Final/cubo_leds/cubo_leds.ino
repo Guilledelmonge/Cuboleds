@@ -2,7 +2,6 @@
 #include "notas.h"
 LiquidCrystal lcd(12, 11, 6, 5, 4, 3);
 int BuzzerPin = 2;
-int Numero = 0; //variable donde se guardara el numero que se escriba
 void setup() {
 pinMode(BuzzerPin, OUTPUT);
 pinMode( 30, OUTPUT );pinMode( 31, OUTPUT );pinMode( 32, OUTPUT );pinMode( 33, OUTPUT );pinMode( 34, OUTPUT );pinMode( 35, OUTPUT );pinMode( 36, OUTPUT );
@@ -14,6 +13,62 @@ Serial.begin(9600);
 void loop() {
  lcd.setCursor(0, 0);
  lcd.print("**BIENVENIDOS!**");
+ //G
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1); delay(5);
+    PrenderLeds(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(5);
+    PrenderLeds(0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0); delay(5);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1); delay(5);
+    PrenderLeds(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(5);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0); delay(5);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1); delay(5);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(5);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0); delay(5);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1); delay(5);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0); delay(5);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0); delay(5);
+  }
+  //C
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1); delay(8);
+    PrenderLeds(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1); delay(8);
+    PrenderLeds(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1); delay(8);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1); delay(8);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0); delay(8);
+  }
+  //A
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0); delay(8);
+    PrenderLeds(1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0); delay(8);
+    PrenderLeds(0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0); delay(8);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1); delay(8);
+  }
+  for (int i = 0; i < 25; i++) {
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0); delay(8);
+    PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1); delay(8);
+  }
+
  char dato = Serial.read();
  if (dato == 'A') {
   lcd.setCursor(0, 0);
