@@ -1,4 +1,6 @@
+#include <LiquidCrystal.h>
 #include "notas.h"
+LiquidCrystal lcd(12, 11, 6, 5, 4, 3);
 int BuzzerPin = 2;
 int Numero = 0; //variable donde se guardara el numero que se escriba
 void setup() {
@@ -10,8 +12,12 @@ Serial.begin(9600);
 }
 
 void loop() {
+ lcd.setCursor(0, 0);
+ lcd.print("**BIENVENIDOS!**");
  char dato = Serial.read();
  if (dato == 'A') {
+  lcd.setCursor(0, 0);
+  lcd.print("***cancion 1****");
   for (int i = 0; i < 1; i++) {
    //codigo y canción #1
   beep(BuzzerPin, Fa, negra);
@@ -110,6 +116,8 @@ void loop() {
   }
 }
 if (dato == 'S') {
+ lcd.setCursor(0, 0);
+ lcd.print("***cancion 2****");
  for (int i = 0; i < 1; i++) {
    //Codigo y canción #2
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0); delay(50); beep(BuzzerPin, Do, corchea);
@@ -187,6 +195,8 @@ if (dato == 'S') {
  }
 }
 if (dato == 'D') {
+ lcd.setCursor(0, 0);
+ lcd.print("***cancion 3****");
  for (int i = 0; i < 1; i++) {    
    //Codigo y canción #3
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0); beep(BuzzerPin, Re, semicorchea); delay(100);
@@ -358,6 +368,8 @@ if (dato == 'D') {
   }
 }
 if (dato == 'F') {
+ lcd.setCursor(0, 0);
+ lcd.print("***cancion 4****");
  for (int i = 0; i < 1; i++) {    
    //codigo y canción #4
   PrenderLeds(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1); delay(50); beep(BuzzerPin, La, cor);
@@ -510,7 +522,7 @@ if (dato == 'F') {
   PrenderLeds(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1); delay(50); delay(650);
   }
  }
-}
+}//PrenderLeds(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);delay(50);
  void beep (unsigned char Pinbuzzer, int frecuencia, long tiempo)
  {
   int x;
